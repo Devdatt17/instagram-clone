@@ -1,38 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+body {
+    background-color: rgb(250, 250, 250);
+    overflow-x: hidden;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* 
+  font-family: "Satisfy", cursive;
+*/
+
+.logo>img {
+    padding-top: 10px;
+    width: 103px;
+    height: 29px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(27, 27, 27, 0.308);
+    height: 54px;
+    background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-icons>img {
+    width: 50px;
+    height: 25px;
+    padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+#profile {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    background-color: rgb(245, 245, 245);
+    padding: 7px;
+    border: 1px solid rgba(27, 27, 27, 0.308);
+    border-radius: 3px;
+    width: 220px;
+}
+
+input::placeholder {
+    text-align: center;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.empty,
+.feed,
+.extras {
+    display: flex;
+    text-align: center;
+}
+
+.empty {
+    width: 20%;
+    padding: 20px;
+}
+
+.feed {
+    width: 602px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.extras {
+    width: 40%;
+    padding: 20px;
+}
+
+.stories {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 84px;
+    background-color: white;
+    border: 1px solid rgba(27, 27, 27, 0.308);
+}
+
+.stories>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 67px !important;
+    height: 67px !important;
+    background: linear-gradient(red, violet, skyblue);
+}
+
+.stories>div>img {
+    padding: 1px;
+    width: 56px !important;
+    height: 56px !important;
+    border: 3px solid white;
+    border-radius: 40px;
+    background-color: rgb(228, 186, 186);
+}
+
+.stories>div>img:hover,
+.stories>div:hover {
+    width: 65px !important;
+    height: 65px !important;
+}
+
+.feedbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+}
+
+.profilecard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    padding: 5px;
+}
+
+.profilecard>img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.header {
+    font-size: large;
+    padding-left: 20px;
+}
+
+section {
+    padding: 10px;
+    text-align: center;
+    width: max-content;
+    height: max-content;
+    color: rgba(105, 102, 102, 0.774);
+}
+
+section>header {
+    font-weight: bold;
+    color: black;
+}
+
+.feedbox>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid rgba(163, 161, 161, 0.377);
+    background-color: rgb(255, 255, 255);
+}
+
+.postheader {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center;
+    height: 10%;
+    padding: 5px 0px 0px 10px;
+}
+
+.postheader>div {
+    padding-bottom: 5px;
+    font-weight: bold;
+    width: min-content;
+}
+
+.postimage>img {
+    height: 60vh;
+}
+
+.headerpost {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.options {
+    padding: 20px;
+    align-items: center;
+}
+
+.postsection {
+    display: flex;
+    flex-direction: column !important;
+    height: 20%;
+}
+
+.caption {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.postlike {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+}
+
+.postlike>img {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+}
+
+
+/* 
+For the save icon
+.postlike>img:last-child {
+    justify-content: end !important;
+    background: linear-gradient(royalblue, blueviolet);
+} */
+
+.postcomment {
+    height: 15%;
+}
+
+.headerimage {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    background-size: cover;
+}
+
+
+/* Responsive designing */
+
+@media only screen and (min-width: 1130px) {
+    .stories>img {
+        width: 80px;
+        height: 80px;
+        border-radius: 60px;
+    }
 }
